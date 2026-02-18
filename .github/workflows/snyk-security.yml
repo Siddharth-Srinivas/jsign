@@ -52,7 +52,7 @@ jobs:
         # Runs Snyk Code (SAST) analysis and uploads result into GitHub.
         # Use || true to not fail the pipeline
       - name: Snyk Code test
-        run: snyk test --sarif --all-projects -d > snyk-code.sarif # || true
+        run: snyk test --sarif --all-projects > snyk-code.sarif # || true
         env:
           # This is where you will need to introduce the Snyk API token created with your Snyk account
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
